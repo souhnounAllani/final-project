@@ -24,6 +24,27 @@ header ul li a {
   font-size: 25px;
   color: coral;
 }
-header h1{
-    color: blue;
+header h1 {
+  color: blue;
+}
+/* main .men {
+  height: 350px;
+ background-image: url('images/men.webp');
+  background-repeat:no-repeat ;
+} */
+main{
+  display: flex;
+  padding: 25px;
+  
+}
+main .show h1 {
+  font-size: 40px;
+}
+main .show p {
+  line-height: 1.5;
+  margin-top: 30px;
+}
+btn {
+  padding: 10px 15px;
+  color:aliceblue;
 }
