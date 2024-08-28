@@ -7,44 +7,191 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
 header {
   display: flex;
   padding: 20px;
   justify-content: space-between;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: sticky;
+  top: 0;
+  background-color: #f7eed3; /* Ensure header has a background color */
+  z-index: 1000; /* Ensure header stays above other elements */
 }
+
 header ul {
   list-style: none;
   display: flex;
   gap: 15px;
 }
+
 header ul li a {
   text-decoration: none;
   font-size: 25px;
   color: coral;
 }
+
 header h1 {
   color: blue;
 }
-/* main .men {
-  height: 350px;
- background-image: url('images/men.webp');
-  background-repeat:no-repeat ;
-} */
-main{
+
+main {
   display: flex;
+  flex-direction: column;
   padding: 25px;
-  
+  margin-top: 80px; /* Adjust margin-top to avoid overlap with sticky total price */
 }
+
 main .show h1 {
   font-size: 40px;
+  padding: 50px;
 }
+
 main .show p {
   line-height: 1.5;
   margin-top: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 20px;
+  font-size: 30px;
+  position: relative;
+  padding-top: 370px;
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
-btn {
-  padding: 10px 15px;
-  color:aliceblue;
+
+.show button {
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 6px;
+  width: 100px; /* Adjusted width */
+  display: block; 
+  margin: 0 auto;
+  font-size: 25px; 
+  padding: 10px;
+  background-color: rgba(52, 18, 205, 0.1);
+}
+
+.show button:hover {
+  background-color: #510683; /* Darkens the button on hover */
+}
+
+.show {
+  background-image: url('images/men.webp'); /* Replace with the path to your image */
+  border-radius: 10px;
+  background-size: cover; /* Make the image cover the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  height: 100vh; /* Make the container fill the viewport height */
+  position: relative;
+  color: white; /* Set text color so it's visible against the background */
+}
+
+i {
+  font-size: 35px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  padding: 3%;
+  margin: 50px 0;
+}
+
+/* Sticky total price container */
+.total-price {
+  display: flex;
+  border: #e4bdbd solid 1px;
+  width: 97%;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 100px; /* Increase this value to make it stick lower */
+  background-color: #e7e7e7; /* Ensure it has a background color */
+  z-index: 1000; /* Ensure it stays above other content */
+  margin-top: 10px; /* Add spacing from the header if needed */
+}
+
+.total-price span {
+  font-size: 30px;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.list-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Adjust the gap between items if needed */
+  width: 100%; /* Ensures the grid takes full width of its container */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+  height: 600px; /* Adjust as needed */
+  box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 250px; /* Adjust as needed */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.card-body {
+  flex: 1; /* Make sure the body takes up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space items evenly */
+  text-align: center;
+}
+
+.quantity {
+  font-size: 25px;
+}
+
+.card-body div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.fa-trash-alt {
+  color: #de6b5c;
+}
+
+.fa-heart.liked {
+  color: red;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 35px; /* Adjust size if necessary */
+}
+
+.icon-button:focus {
+  outline: none; /* Remove focus outline if not needed */
 }
