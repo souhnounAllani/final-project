@@ -41,5 +41,6 @@ document.querySelectorAll('.card-body').forEach(function(product) {
 
     heartBtn.addEventListener('click', function() {
         heartBtn.classList.toggle('liked');
+    
     });
 });
